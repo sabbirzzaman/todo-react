@@ -1,7 +1,7 @@
 import React from 'react';
 import TaskItem from '../TaskItem/TaskItem';
 
-const Tasks = ({todo}) => {
+const Tasks = ({todo, handleRemoveItem}) => {
     return (
         <div className="overflow-x-auto">
             <table className="table table-compact w-full block">
@@ -21,7 +21,7 @@ const Tasks = ({todo}) => {
                 </thead>
                 <tbody>
                     {
-                        todo.map((todo, index) => <TaskItem key={index} todo={todo}></TaskItem>)
+                        todo.map((todo, index) => <TaskItem key={index} todo={todo} handleRemoveItem={handleRemoveItem}></TaskItem>)
                     }
                 </tbody>
             </table>

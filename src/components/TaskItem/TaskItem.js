@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaskItem = ({todo}) => {
+const TaskItem = ({todo, handleRemoveItem}) => {
     const {_id, name, description} = todo;
 
     return (
@@ -16,7 +16,7 @@ const TaskItem = ({todo}) => {
                 {description}
             </td>
             <td className="bg-transparent text-accent border-0 text-right">
-                <button className="btn btn-error text-white btn-xs">
+                <button onClick={() => handleRemoveItem(_id)} className="btn btn-error text-white btn-xs">
                     Remove
                 </button>
             </td>
