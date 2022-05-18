@@ -3,7 +3,7 @@ import TaskItem from '../TaskItem/TaskItem';
 
 const Tasks = ({todo, handleRemoveItem}) => {
     return (
-        <div className="overflow-x-auto">
+        <div className="overflow-x-auto scrollbar-thin scrollbar-thumb-green-100 scrollbar-track-transparent">
             <table className="table table-compact w-full block">
                 <thead>
                     <tr>

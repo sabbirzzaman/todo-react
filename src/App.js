@@ -40,7 +40,7 @@ function App() {
             className="w-full h-screen"
         >
             <div className="bg-[#01130b5c] w-full h-full flex justify-center items-center">
-                <div className="lg:w-[800px] md:w-[600px] sm:w-[350px] bg-secondary h-4/5 rounded-lg shadow-lg text-center p-8">
+                <div className="lg:w-[800px] md:w-[600px] sm:w-[350px] bg-secondary h-4/5 rounded-lg shadow-lg text-center p-8 overflow-y-scroll scrollbar-thin scrollbar-thumb-green-100 white scrollbar-track-transparent">
                     <Header></Header>
                     <InputForm handleAddTodo={handleAddTodo}></InputForm>
                     <Tasks
@@ -49,6 +49,7 @@ function App() {
                     ></Tasks>
                 </div>
             </div>
+            
         </div>
     );
 }
