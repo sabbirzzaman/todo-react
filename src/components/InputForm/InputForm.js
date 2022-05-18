@@ -1,10 +1,14 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-const InputForm = () => {
-    const { register, handleSubmit } = useForm();
+const InputForm = ({handleAddTodo}) => {
+    const { register, handleSubmit, reset } = useForm();
 
-    const onSubmit = (data) => console.log(data);
+    const onSubmit = (data) => {
+        handleAddTodo(data)
+        reset()
+    };
+    
     return (
         <div className="form-control mb-10">
             <form
