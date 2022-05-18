@@ -1,14 +1,22 @@
 import React from 'react';
 import { useForm } from 'react-hook-form';
 
-const InputForm = ({handleAddTodo}) => {
+const InputForm = ({ handleAddTodo }) => {
     const { register, handleSubmit, reset } = useForm();
 
-    const onSubmit = (data) => {
-        handleAddTodo(data)
-        reset()
+    const onSubmit = ({ name, description }) => {
+        const randomNumber = new Date().getTime() * Math.random() * 100000;
+
+        const dataWithId = {
+            _id: randomNumber,
+            name,
+            description,
+        };
+
+        handleAddTodo(dataWithId);
+        reset();
     };
-    
+
     return (
         <div className="form-control mb-10">
             <form
